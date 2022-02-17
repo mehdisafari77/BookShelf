@@ -9,6 +9,12 @@ import UIKit
 
 class BookDetailViewController: UIViewController {
     
+    @IBOutlet weak var bookTitleLabel: UILabel!
+    @IBOutlet weak var authorNameLabel: UILabel!
+    @IBOutlet weak var coverImgLabel: UIImageView!
+    @IBOutlet weak var releaseYearLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 49 / 255, green: 163 / 255, blue: 159 / 255, alpha: 1.0)
@@ -22,6 +28,7 @@ class BookDetailViewController: UIViewController {
         authorNameLabel.text = book.authorName
         coverImgLabel.contentMode = .scaleAspectFit
         coverImgLabel.image = UIImage(named: book.coverImg)
+        coverImgLabel.layer.cornerRadius = 45.0
         releaseYearLabel.text = "\(book.releaseYear)"
         descriptionLabel.text = book.description
     }
@@ -31,11 +38,4 @@ class BookDetailViewController: UIViewController {
             updateViews()
         }
     }
-    
-    @IBOutlet weak var bookTitleLabel: UILabel!
-    @IBOutlet weak var authorNameLabel: UILabel!
-    @IBOutlet weak var coverImgLabel: UIImageView!
-    @IBOutlet weak var releaseYearLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
 }

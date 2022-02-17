@@ -21,8 +21,16 @@ class BookTableViewController: UITableViewController {
         
         let book = BookController.books[indexPath.row]
         cell.textLabel?.text = "\(book.bookTitle) by \(book.authorName)"
+        
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = .white
+        }
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 55
     }
     
     // MARK: - Navigation
