@@ -63,9 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				B59518FB27BED0F6005A0C5F /* Resources */,
-				B59518FA27BED0F0005A0C5F /* Controllers */,
 				B59518F827BED0DC005A0C5F /* Models */,
 				B59518F927BED0E4005A0C5F /* Views */,
+				B59518FA27BED0F0005A0C5F /* Controllers */,
 			);
 			path = BookShelf;
 			sourceTree = "<group>";
